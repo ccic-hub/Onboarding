@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCIC – New Client Opportunity Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:       #c0272d;
+    --red-dark:  #9b1e23;
+    --red-lt:    #f6e3e3;
+    --ink:       #1c1c1c;
+    --mid:       #4a4a4a;
+    --muted:     #888;
+    --border:    #ddd;
+    --bg:        #f7f7f7;
+    --surface:   #ffffff;
+    --field-bg:  #f2f2f2;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .page { max-width: 840px; margin: 0 auto; padding-bottom: 60px; }
+
+  /* HEADER */
+  .header-banner {
+    background: var(--red);
+    color: #fff;
+    padding: 32px 44px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-banner::after {
+    content: '';
+    position: absolute;
+    right: -40px; top: -40px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 40px solid rgba(255,255,255,0.07);
+    pointer-events: none;
+  }
+  .brand-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    opacity: 0.75; margin-bottom: 10px;
+  }
+  .header-banner h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px; font-weight: 700;
+    line-height: 1.05; text-transform: uppercase; letter-spacing: 0.02em;
+  }
+  .header-banner h1 span {
+    display: block; font-weight: 300;
+    font-size: 26px; letter-spacing: 0.04em; opacity: 0.88;
+  }
+  .header-meta {
+    position: absolute; right: 44px; top: 50%; transform: translateY(-50%);
+    text-align: right; font-size: 11px; opacity: 0.75; line-height: 1.9;
+  }
+  .header-meta strong { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .stripe { height: 5px; background: var(--red-dark); }
+
+  /* BODY */
+  .body-wrap { padding: 36px 44px; background: var(--surface); }
+
+  .intro-note {
+    background: var(--red-lt);
+    border-left: 4px solid var(--red);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 36px;
+    font-size: 13px; color: var(--mid); line-height: 1.7;
+  }
+  .intro-note strong { color: var(--red); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 40px; }
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--red);
+  }
+  .section-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--red); color: #fff;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink);
+  }
+
+  /* FORM GRID */
+  .form-grid { display: grid; gap: 14px; }
+  .form-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .form-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field.span-2 { grid-column: span 2; }
+  .field.span-3 { grid-column: span 3; }
+
+  label {
+    font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted);
+  }
+  label .req { color: var(--red); margin-left: 2px; }
+
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="date"], input[type="number"], select, textarea {
+    width: 100%; background: var(--field-bg);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 9px 12px;
+    font-family: 'Barlow', sans-serif; font-size: 13.5px; color: var(--ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    -webkit-appearance: none; appearance: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none; border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(192,39,45,0.1); background: #fff;
+  }
+  textarea { resize: vertical; min-height: 76px; }
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
+  }
+
+  /* CHECKBOXES */
+  .check-group { display: flex; flex-wrap: wrap; gap: 8px 16px; padding-top: 3px; }
+  .check-item {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 13px; cursor: pointer; color: var(--ink);
+    font-weight: 400; letter-spacing: 0; text-transform: none;
+  }
+  .check-item input[type="checkbox"], .check-item input[type="radio"] {
+    width: 15px; height: 15px; accent-color: var(--red);
+    cursor: pointer; flex-shrink: 0;
+  }
+
+  /* SUB-LABEL */
+  .sub-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--red);
+    margin: 18px 0 10px; padding-bottom: 5px; border-bottom: 1px solid #e8e8e8;
+  }
+
+  /* EQUIPMENT CARDS */
+  .equip-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .equip-card {
+    border: 1.5px solid var(--border); border-radius: 6px;
+    padding: 13px 14px; background: var(--surface);
+    transition: border-color 0.15s, background 0.15s; cursor: pointer;
+  }
+  .equip-card:has(input[type="checkbox"]:checked) {
+    border-color: var(--red); background: #fff8f8;
+  }
+  .equip-card-header { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 7px; }
+  .equip-card-header input[type="checkbox"] {
+    width: 15px; height: 15px; accent-color: var(--red);
+    cursor: pointer; flex-shrink: 0; margin-top: 2px;
+  }
+  .equip-card-header label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--ink); cursor: pointer; line-height: 1.2;
+  }
+  .equip-desc { font-size: 11.5px; color: var(--muted); line-height: 1.55; padding-left: 24px; }
+
+  /* RISK TABLE */
+  .risk-grid { display: grid; gap: 8px; }
+  .risk-row {
+    display: grid; grid-template-columns: 2.2fr 1fr 1fr;
+    gap: 8px; align-items: center;
+    padding: 9px 12px; background: var(--field-bg);
+    border-radius: 4px; font-size: 13px;
+  }
+  .risk-row.risk-header {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted);
+    background: none; padding-top: 0; padding-bottom: 4px;
+  }
+  .risk-row select { font-size: 12px; padding: 5px 28px 5px 8px; }
+
+  /* QUESTION LIST */
+  .question-list { display: grid; gap: 12px; }
+  .question-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+  .q-num {
+    width: 22px; height: 22px;
+    border: 1.5px solid var(--red); color: var(--red);
+    border-radius: 50%; font-size: 10px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 9px;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  /* FOOTER */
+  .form-footer {
+    margin-top: 48px; padding-top: 24px;
+    border-top: 2px solid var(--border);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .sig-block label {
+    display: block; font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .sig-line { border-bottom: 1px solid var(--border); height: 36px; margin-bottom: 4px; }
+
+  .page-footer-bar {
+    background: var(--ink); color: rgba(255,255,255,0.6);
+    font-size: 11px; padding: 14px 44px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .page-footer-bar a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+  .submit-row { display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px; }
+  .btn {
+    padding: 11px 26px; border-radius: 4px;
+    font-family: 'Barlow', sans-serif; font-size: 13px;
+    font-weight: 600; cursor: pointer; border: none;
+    letter-spacing: 0.04em; transition: all 0.15s;
+  }
+  .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--mid); }
+  .btn-outline:hover { border-color: var(--red); color: var(--red); }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { background: var(--red-dark); }
+  .hint { font-size: 11.5px; color: var(--muted); font-style: italic; margin-top: 2px; }
+
+  /* ── PARTNERSHIP TIER CARDS ── */
+  .partner-pathway { margin-bottom: 28px; }
+  .partner-pathway-intro {
+    font-size: 12.5px; color: var(--mid); line-height: 1.6;
+    margin-bottom: 12px; font-style: italic;
+  }
+  .tier-grid { display: grid; gap: 10px; }
+  .tier-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .tier-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .tier-grid.cols-1 { grid-template-columns: 1fr; }
+  .tier-card {
+    border: 1.5px solid var(--border); border-radius: 6px;
+    padding: 14px 16px; background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .tier-card:has(input[type="checkbox"]:checked) {
+    border-color: var(--red); background: #fff8f8;
+  }
+  .tier-card-header { display: flex; align-items: flex-start; gap: 9px; }
+  .tier-card-header input[type="checkbox"] {
+    width: 15px; height: 15px; accent-color: var(--red);
+    cursor: pointer; flex-shrink: 0; margin-top: 2px;
+  }
+  .tier-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--ink); line-height: 1.2;
+    cursor: pointer;
+  }
+  .tier-card-sub {
+    font-size: 11px; color: var(--muted); font-weight: 400;
+    text-transform: none; letter-spacing: 0; display: block; margin-top: 1px;
+  }
+  .tier-price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px; font-weight: 700; color: var(--red); line-height: 1;
+  }
+  .tier-price span {
+    font-size: 11px; font-weight: 400; color: var(--muted);
+    font-family: 'Barlow', sans-serif; display: block; margin-top: 2px;
+  }
+  .tier-benefits {
+    list-style: none; font-size: 11.5px; color: var(--mid);
+    line-height: 1.6; margin: 0; padding: 0;
+  }
+  .tier-benefits li { padding-left: 14px; position: relative; }
+  .tier-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--red); font-size: 10px; top: 2px; }
+  .tier-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+  @media (max-width: 620px) {
+    .tier-grid.cols-3, .tier-grid.cols-4 { grid-template-columns: 1fr; }
+  }
+
+    body { background: #fff; font-size: 12px; }
+    .page { padding: 0; }
+    .body-wrap { padding: 24px 32px; }
+    .header-banner { padding: 20px 32px; }
+    .submit-row { display: none; }
+    input, select, textarea { border: 1px solid #ccc !important; background: #fff !important; box-shadow: none !important; }
+    .equip-card, .section { break-inside: avoid; }
+  }
+  @media (max-width: 620px) {
+    .body-wrap { padding: 28px 20px; }
+    .header-banner { padding: 24px 20px; }
+    .header-meta { display: none; }
+    .form-grid.cols-2, .form-grid.cols-3, .equip-grid { grid-template-columns: 1fr; }
+    .form-footer { grid-template-columns: 1fr; }
+    .field.span-2, .field.span-3 { grid-column: span 1; }
+    .risk-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header-banner">
+    <div class="brand-label">Central Coast Industry Connect</div>
+    <h1>New Client Opportunity Brief<span>Food Manufacturing Innovation Hub</span></h1>
+    <div class="header-meta">
+      <strong>CCIC Intake Form</strong>
+      Version 1.0 · Confidential<br>
+      <span id="form-date"></span>
+    </div>
+  </div>
+  <div class="stripe"></div>
+
+  <div class="body-wrap">
+
+    <div class="intro-note">
+      <strong>Welcome to the Hub.</strong> Please complete this form before your initial meeting with our team. Your answers help us match you with the right equipment and services, and make our time together as productive as possible. All information is treated as confidential.
+    </div>
+
+    <!-- 1. BUSINESS & CONTACT -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">1</div><h2>Business &amp; Contact Details</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Business / Brand Name <span class="req">*</span></label><input type="text" id="business_name" placeholder="Legal or trading name"></div>
+        <div class="field"><label>Trading Name (if different)</label><input type="text" id="trading_name"></div>
+        <div class="field"><label>Primary Contact Name <span class="req">*</span></label><input type="text" id="contact_name" placeholder="Full name"></div>
+        <div class="field"><label>Role / Title</label><input type="text" id="contact_role" placeholder="e.g. Founder, Head of Production"></div>
+        <div class="field"><label>Email Address <span class="req">*</span></label><input type="email" id="contact_email" placeholder="name@example.com"></div>
+        <div class="field"><label>Phone Number</label><input type="tel" id="contact_phone" placeholder="+61 4xx xxx xxx"></div>
+        <div class="field"><label>Business Location / State</label><input type="text" id="business_location" placeholder="e.g. Gosford, NSW"></div>
+        <div class="field"><label>Business Stage</label>
+          <select id="business_stage">
+            <option value="">— Select —</option>
+            <option>Concept / Pre-revenue</option>
+            <option>Startup (trading &lt;2 years)</option>
+            <option>Established (trading 2–5 years)</option>
+            <option>Mature (trading 5+ years)</option>
+          </select>
+        </div>
+        <div class="field span-2"><label>Brief Business Description</label><textarea rows="2" id="business_description" placeholder="What does your business make and who are your customers?"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 2. PRODUCT OVERVIEW -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">2</div><h2>Product Overview</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Product / Range Name <span class="req">*</span></label><input type="text" id="product_name" placeholder="e.g. Artisan Grain Bars, Hop &amp; Brew Lager"></div>
+        <div class="field"><label>Product Category <span class="req">*</span></label>
+          <select id="product_category">
+            <option value="">— Select —</option>
+            <optgroup label="Beverages">
+              <option>Alcoholic Beverage (beer, wine, spirits, cider)</option>
+              <option>Low-Alcohol Beverage (&lt;0.5% ABV)</option>
+              <option>Non-Alcoholic / Soft Drink</option>
+              <option>Functional / Health Beverage</option>
+              <option>Juice / Cordial / Kombucha</option>
+            </optgroup>
+            <optgroup label="Baked &amp; Grain">
+              <option>Bread / Rolls / Loaf Products</option>
+              <option>Pastry / Pies / Savoury Baked Goods</option>
+              <option>Cakes / Sweet Baked Goods</option>
+              <option>Biscuits / Cookies / Crackers</option>
+              <option>Extruded Snacks &amp; Cereals</option>
+              <option>Pasta / Noodles</option>
+            </optgroup>
+            <optgroup label="Food Products">
+              <option>Confectionery / Chocolate</option>
+              <option>Sauces / Condiments / Dressings</option>
+              <option>Dips / Spreads / Nut Butters</option>
+              <option>Ready Meals / Meal Kits</option>
+              <option>Meat / Seafood / Poultry Products</option>
+              <option>Dairy / Plant-Based Dairy Alternatives</option>
+              <option>Fruit &amp; Vegetable Products</option>
+              <option>Snack Bars / Protein Bars / Trail Mix</option>
+              <option>Soups / Broths / Stocks</option>
+              <option>Spices / Seasonings / Blends</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option>Health Supplement / Nutraceutical</option>
+              <option>Pet Food</option>
+              <option>Other (please specify below)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field"><label>If "Other", please specify</label><input type="text" id="product_category_other"></div>
+        <div class="field"><label>Number of SKUs Planned</label><input type="number" id="sku_count" min="1" placeholder="e.g. 3"></div>
+        <div class="field span-2"><label>Pack Format &amp; Size(s)</label><input type="text" id="pack_format" placeholder="e.g. 330ml slim can, 500g flow-wrapped bar, 750g loaf"></div>
+        <div class="field span-2"><label>Product Description &amp; Positioning</label><textarea rows="3" id="product_description" placeholder="Describe the product, its key ingredients, intended consumer, and what makes it distinctive. Include any functional or active ingredients and health claims if applicable."></textarea></div>
+        <div class="field"><label>Target Retail Price (per unit)</label><input type="text" id="retail_price" placeholder="e.g. $5–$8 RRP"></div>
+        <div class="field"><label>Primary Sales Channel</label>
+          <select id="sales_channel">
+            <option value="">— Select —</option>
+            <option>Direct-to-consumer (webshop)</option>
+            <option>Farmers markets / events</option>
+            <option>Independent retail / specialty stores</option>
+            <option>Supermarkets / major retail</option>
+            <option>Hospitality / food service / on-premise</option>
+            <option>Wholesale / distributor</option>
+            <option>Petrol station / convenience</option>
+            <option>Export</option>
+            <option>Multiple / unsure</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sub-label">Formulation &amp; Process Characteristics</div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Core / Key Ingredients</label><input type="text" id="core_ingredients" placeholder="e.g. wheat flour, malt barley, fruit pulp, oats, nuts"></div>
+        <div class="field"><label>Product State / Form</label>
+          <select id="product_state">
+            <option value="">— Select —</option>
+            <option>Liquid</option>
+            <option>Semi-liquid / paste / gel</option>
+            <option>Solid – baked</option>
+            <option>Solid – extruded</option>
+            <option>Solid – formed / moulded / pressed</option>
+            <option>Powder / dry blend</option>
+            <option>Mixed / layered / composite</option>
+          </select>
+        </div>
+        <div class="field"><label>Contains Alcohol?</label>
+          <select id="contains_alcohol">
+            <option value="">— Select —</option>
+            <option>No</option>
+            <option>Yes – low alcohol (&lt;0.5%)</option>
+            <option>Yes – standard (0.5%–10%)</option>
+            <option>Yes – high (10%+)</option>
+            <option>Not yet determined</option>
+          </select>
+        </div>
+        <div class="field"><label>Requires Cooking / Baking / Heating?</label>
+          <select id="requires_cooking">
+            <option value="">— Select —</option>
+            <option>Yes – full cook / bake</option>
+            <option>Yes – partial / blanch / temper</option>
+            <option>Yes – hot fill / pasteurisation</option>
+            <option>No – ambient / cold process</option>
+            <option>Not yet determined</option>
+          </select>
+        </div>
+        <div class="field"><label>Requires Extrusion?</label>
+          <select id="requires_extrusion">
+            <option value="">— Select —</option>
+            <option>Yes</option><option>No</option><option>Unsure</option>
+          </select>
+        </div>
+        <div class="field"><label>Requires Carbonation?</label>
+          <select id="requires_carbonation">
+            <option value="">— Select —</option>
+            <option>Yes – forced carbonation</option>
+            <option>Yes – natural / refermentation</option>
+            <option>No</option><option>Not yet determined</option>
+          </select>
+        </div>
+        <div class="field"><label>Contains Particulates or Inclusions?</label>
+          <select id="contains_particulates">
+            <option value="">— Select —</option>
+            <option>Yes</option><option>No</option><option>Unsure</option>
+          </select>
+        </div>
+        <div class="field"><label>If yes – particulate type &amp; approx. size</label><input type="text" id="particulate_detail" placeholder="e.g. fruit pieces ~5mm, nut chunks, spice flakes"></div>
+        <div class="field"><label>Requires X-Ray / Foreign Body Inspection?</label>
+          <select>
+            <option value="">— Select —</option>
+            <select id="requires_xray">
+            <option value="">— Select —</option>
+            <option>Yes – mandatory for retail / export</option>
+            <option>Yes – preferred</option>
+            <option>No</option><option>Unsure</option>
+          </select>
+        </div>
+        <div class="field span-2"><label>Preservatives / Additives</label>
+          <div class="check-group" style="margin-bottom:7px;">
+            <label class="check-item"><input type="radio" name="preservatives" class="preservatives-radio" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="preservatives" class="preservatives-radio" value="no"> No – clean label preferred</label>
+            <label class="check-item"><input type="radio" name="preservatives" class="preservatives-radio" value="open"> Open to recommendation</label>
+          </div>
+          <input type="text" id="preservatives_detail" placeholder="If yes, specify (e.g. citric acid, potassium sorbate)">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HUB EQUIPMENT & SERVICES -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">3</div><h2>Hub Equipment &amp; Services Required</h2></div>
+      <p class="hint" style="margin-bottom:16px;">Tick all that apply. Don't worry if you're unsure — we'll work through this together at your meeting.</p>
+
+      <div class="sub-label">Development &amp; Processing Facilities</div>
+      <div class="equip-grid">
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-testkitchen"><label for="eq-testkitchen">Test Kitchen</label></div>
+          <div class="equip-desc">Bench-scale recipe development, trial batches, sensory evaluation and initial formulation work across all product types.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-bakery"><label for="eq-bakery">Bakery</label></div>
+          <div class="equip-desc">Purpose-built bakery for bread, pastry, pies, biscuits, cakes and other baked goods — from pilot to production scale.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-brewery"><label for="eq-brewery">Brewery</label></div>
+          <div class="equip-desc">Brewing and fermentation infrastructure for beer, cider, kombucha, functional beverages and other fermented products.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-extruder"><label for="eq-extruder">Extruder</label></div>
+          <div class="equip-desc">Food-grade extrusion for snacks, cereals, pet food, pasta and textured plant protein. Supports both standard and high moisture extrusion (HMMA) for meat-alternative and structured protein products.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-kettles"><label for="eq-kettles">Kettles / Cooking Vessels</label></div>
+          <div class="equip-desc">Heated and jacketed kettles for sauces, soups, jams, confectionery, hot-process products and bulk cooking or blending.</div>
+        </div>
+      </div>
+
+      <div class="sub-label" style="margin-top:18px;">Packaging &amp; Quality Inspection</div>
+      <div class="equip-grid">
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-flowwrap"><label for="eq-flowwrap">Flow Wrapper</label></div>
+          <div class="equip-desc">Horizontal flow-wrap packaging for bars, baked goods, sandwiches, individual snack portions and similar solid products.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-filling"><label for="eq-filling">Liquid Filling &amp; Canning</label></div>
+          <div class="equip-desc">Can filling (330ml slim and standard formats), seaming, labelling and case-packing for liquid products.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-xray"><label for="eq-xray">X-Ray Inspection</label></div>
+          <div class="equip-desc">Inline foreign body detection (metal, glass, dense plastic, bone) for product safety and retail or export compliance.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-labelling"><label for="eq-labelling">Labelling (Auto / Manual)</label></div>
+          <div class="equip-desc">Automatic or manual label application for bottles, cans, pouches, trays and wrapped products.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-packing"><label for="eq-packing">Case Packing &amp; Palletising</label></div>
+          <div class="equip-desc">Secondary packaging, case packing and palletising of finished goods ready for dispatch or storage.</div>
+        </div>
+      </div>
+
+      <div class="sub-label" style="margin-top:18px;">Testing, Advisory &amp; Support Services</div>
+      <div class="equip-grid">
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-testing"><label for="eq-testing">Product Testing &amp; Analysis</label></div>
+          <div class="equip-desc">Shelf-life, stability, nutritional analysis, microbiological testing, sensory panels and regulatory compliance testing.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-supply"><label for="eq-supply">Supply Chain &amp; Procurement</label></div>
+          <div class="equip-desc">Ingredient and packaging supplier introductions, group buying access, raw material storage and logistics coordination.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-storage"><label for="eq-storage">Storage &amp; Logistics</label></div>
+          <div class="equip-desc">Pallet storage (raw materials &amp; finished goods), forklift access, cool / ambient storage options and courier pickup.</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-advisory"><label for="eq-advisory">Advisory &amp; Commercialisation</label></div>
+          <div class="equip-desc">Mentoring, regulatory and labelling guidance, market access, export support and compliance advice (FSANZ etc.).</div>
+        </div>
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="eq-workspace"><label for="eq-workspace">Hot-Desk / Workspace</label></div>
+          <div class="equip-desc">Occasional or regular on-site desk space, meeting rooms and collaborative workspace within the Hub.</div>
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-top:14px;">
+        <div class="field"><label>Additional Equipment, Services, or Specific Requirements</label>
+          <textarea rows="2" id="equipment_other" placeholder="Anything not listed — specialist equipment, unique process requirements, client-owned equipment to be stored or used at the Hub, or other needs."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRODUCT CONSIDERATIONS -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">4</div><h2>Product Considerations</h2></div>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:18px;line-height:1.7;">This section helps our team understand what's most important to you about your product. There are no technical right or wrong answers — just tick what applies and we'll talk through everything at the meeting.</p>
+
+      <div class="sub-label">Quality &amp; Consistency</div>
+      <div class="form-grid cols-2" style="margin-bottom:16px;">
+        <div class="field span-2">
+          <div class="check-group" style="margin-top:4px;">
+            <label class="check-item"><input type="checkbox" id="qc-0" data-group="quality_considerations" value="Product looks and tastes the same every batch"> Product looks and tastes the same every batch</label>
+            <label class="check-item"><input type="checkbox" id="qc-1" data-group="quality_considerations" value="Long shelf life is important for my product"> Long shelf life is important for my product</label>
+            <label class="check-item"><input type="checkbox" id="qc-2" data-group="quality_considerations" value="Texture or structure needs to hold up"> Texture or structure needs to hold up (e.g. not go soft, crumble, or separate)</label>
+            <label class="check-item"><input type="checkbox" id="qc-3" data-group="quality_considerations" value="Flavour or aroma is delicate"> Flavour or aroma is delicate and easy to lose in processing</label>
+            <label class="check-item"><input type="checkbox" id="qc-4" data-group="quality_considerations" value="My product contains live cultures"> My product contains live cultures, active ingredients, or probiotics</label>
+            <label class="check-item"><input type="checkbox" id="qc-5" data-group="quality_considerations" value="I want to keep the ingredient list short"> I want to keep the ingredient list short and natural (clean label)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-label">Safety &amp; Compliance</div>
+      <div class="form-grid cols-2" style="margin-bottom:16px;">
+        <div class="field span-2">
+          <div class="check-group" style="margin-top:4px;">
+            <label class="check-item"><input type="checkbox" id="sc-0" data-group="safety_considerations" value="My product needs to meet strict food safety standa"> My product needs to meet strict food safety standards for major retail or export</label>
+            <label class="check-item"><input type="checkbox" id="sc-1" data-group="safety_considerations" value="My product contains alcohol and needs to meet regu"> My product contains alcohol and needs to meet regulatory requirements</label>
+            <label class="check-item"><input type="checkbox" id="sc-2" data-group="safety_considerations" value="My product is carbonated and I'm worried about pre"> My product is carbonated and I'm worried about pressure or re-fermentation after sealing</label>
+            <label class="check-item"><input type="checkbox" id="sc-3" data-group="safety_considerations" value="My product needs to be free from cross-contaminati"> My product needs to be free from cross-contamination with common allergens</label>
+            <label class="check-item"><input type="checkbox" id="sc-4" data-group="safety_considerations" value="I need to make specific health or nutrition claims"> I need to make specific health or nutrition claims on the label</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-label">Packaging &amp; Scale</div>
+      <div class="form-grid cols-2" style="margin-bottom:16px;">
+        <div class="field span-2">
+          <div class="check-group" style="margin-top:4px;">
+            <label class="check-item"><input type="checkbox" id="pc-0" data-group="packaging_considerations" value="I'm not sure my recipe will work"> I'm not sure my recipe will work the same at a larger scale</label>
+            <label class="check-item"><input type="checkbox" id="pc-1" data-group="packaging_considerations" value="My product needs to survive transport"> My product needs to survive transport and retail handling without damage</label>
+            <label class="check-item"><input type="checkbox" id="pc-2" data-group="packaging_considerations" value="I'm worried about air / oxygen"> I'm worried about air / oxygen getting into the product during filling or storage</label>
+            <label class="check-item"><input type="checkbox" id="pc-3" data-group="packaging_considerations" value="I have chunks, pieces, or inclusions"> I have chunks, pieces, or inclusions in my product that are hard to handle in machinery</label>
+            <label class="check-item"><input type="checkbox" id="pc-4" data-group="packaging_considerations" value="I have specific packaging requirements"> I have specific packaging requirements</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label>Is there anything else about your product that you're unsure or concerned about?</label>
+          <textarea rows="3" id="product_concerns" placeholder="Tell us in plain language — e.g. 'I'm not sure if it will last 12 months on the shelf', 'the colour changes when I heat it', 'I can't get the layers to stick together'. Our team will help from here."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PRODUCTION SCALE & TIMELINE -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">5</div><h2>Production Scale &amp; Timeline</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Target Launch / First Production Date</label><input type="date" id="launch_date"></div>
+        <div class="field"><label>Pilot / Development Batch Size</label><input type="text" id="pilot_batch_size" placeholder="e.g. 20 kg, 50 L, 200 units per SKU"></div>
+        <div class="field"><label>Initial Production Run Size</label><input type="text" id="initial_run_size" placeholder="e.g. 500 kg, 1,800 L, 2,000 bars per SKU"></div>
+        <div class="field"><label>Anticipated Production Frequency</label>
+          <select id="production_frequency">
+            <option value="">— Select —</option>
+            <option>One-off / seasonal</option>
+            <option>Weekly</option>
+            <option>Fortnightly</option>
+            <option>Monthly batches</option>
+            <option>Quarterly batches</option>
+            <option>Ad hoc / as needed</option>
+            <option>Unsure at this stage</option>
+          </select>
+        </div>
+        <div class="field"><label>Annual Volume Target (Year 1)</label><input type="text" id="annual_volume" placeholder="e.g. ~10,000 units, 3,000 L, 2 tonnes"></div>
+        <div class="field"><label>Known Seasonal Peaks</label><input type="text" id="seasonal_peaks" placeholder="e.g. Christmas, Easter, Summer"></div>
+        <div class="field"><label>Target Shelf Life</label><input type="text" id="target_shelf_life" placeholder="e.g. 6 months ambient, 12 months frozen, 3 weeks chilled"></div>
+        <div class="field"><label>Storage Requirements (Finished Goods)</label><input type="text" id="storage_requirements" placeholder="e.g. ambient 18–23°C, chilled &lt;5°C, ~3 pallets"></div>
+      </div>
+    </section>
+
+    <!-- 6. COMPLIANCE & CERTIFICATIONS -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">6</div><h2>Compliance &amp; Certifications</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field span-2"><label>Certifications Required or Desired</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" id="cert-0" data-group="certifications" value="HACCP"> HACCP</label>
+            <label class="check-item"><input type="checkbox" id="cert-1" data-group="certifications" value="SQF / BRC / GFSI"> SQF / BRC / GFSI</label>
+            <label class="check-item"><input type="checkbox" id="cert-2" data-group="certifications" value="Organic (ACO / NASAA)"> Organic (ACO / NASAA)</label>
+            <label class="check-item"><input type="checkbox" id="cert-3" data-group="certifications" value="Halal"> Halal</label>
+            <label class="check-item"><input type="checkbox" id="cert-4" data-group="certifications" value="Kosher"> Kosher</label>
+            <label class="check-item"><input type="checkbox" id="cert-5" data-group="certifications" value="Vegan / Plant-Based"> Vegan / Plant-Based</label>
+            <label class="check-item"><input type="checkbox" id="cert-6" data-group="certifications" value="Gluten-Free"> Gluten-Free</label>
+            <label class="check-item"><input type="checkbox" id="cert-7" data-group="certifications" value="Non-GMO"> Non-GMO</label>
+            <label class="check-item"><input type="checkbox" id="cert-8" data-group="certifications" value="Export compliant"> Export compliant</label>
+            <label class="check-item"><input type="checkbox" id="cert-9" data-group="certifications" value="Other"> Other</label>
+          </div>
+        </div>
+        <div class="field"><label>Other Certification Details</label><input type="text" id="cert_other_detail" placeholder="Specify any other certifications or standards"></div>
+        <div class="field"><label>Regulatory / Labelling Constraints</label><input type="text" id="regulatory_constraints" placeholder="e.g. health claims, FSANZ, alcohol labelling, allergen declarations"></div>
+        <div class="field span-2"><label>Allergens Present in Product (tick all that apply)</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" id="al-0" data-group="allergens" value="Gluten / Wheat"> Gluten / Wheat</label>
+            <label class="check-item"><input type="checkbox" id="al-1" data-group="allergens" value="Dairy / Milk"> Dairy / Milk</label>
+            <label class="check-item"><input type="checkbox" id="al-2" data-group="allergens" value="Eggs"> Eggs</label>
+            <label class="check-item"><input type="checkbox" id="al-3" data-group="allergens" value="Tree Nuts"> Tree Nuts</label>
+            <label class="check-item"><input type="checkbox" id="al-4" data-group="allergens" value="Peanuts"> Peanuts</label>
+            <label class="check-item"><input type="checkbox" id="al-5" data-group="allergens" value="Sesame"> Sesame</label>
+            <label class="check-item"><input type="checkbox" id="al-6" data-group="allergens" value="Soy"> Soy</label>
+            <label class="check-item"><input type="checkbox" id="al-7" data-group="allergens" value="Fish / Shellfish"> Fish / Shellfish</label>
+            <label class="check-item"><input type="checkbox" id="al-8" data-group="allergens" value="Lupin"> Lupin</label>
+            <label class="check-item"><input type="checkbox" id="al-9" data-group="allergens" value="Sulphites"> Sulphites</label>
+            <label class="check-item"><input type="checkbox" id="al-10" data-group="allergens" value="None known"> None known</label>
+          </div>
+        </div>
+        <div class="field span-2"><label>Non-Negotiable Ingredients, Features, or Brand Attributes</label>
+          <textarea rows="2" id="nonnegotiables" placeholder="Anything that must be preserved — formulation, brand integrity, or consumer promise standpoint."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. COMMERCIAL & BUDGET -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">7</div><h2>Commercial &amp; Budget Context</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Will You Supply All Production Inputs?</label>
+          <select id="supply_inputs">
+            <option value="">— Select —</option>
+            <option>Yes – I will supply all ingredients &amp; packaging</option>
+            <option>Partially – I need sourcing support for some items</option>
+            <option>No – I need full sourcing assistance</option>
+            <option>Unsure</option>
+          </select>
+        </div>
+        <div class="field"><label>Overall Budget Range (Development + Pilot)</label>
+          <select id="budget_range">
+            <option value="">— Select —</option>
+            <option>Under $5,000</option>
+            <option>$5,000 – $15,000</option>
+            <option>$15,000 – $30,000</option>
+            <option>$30,000 – $60,000</option>
+            <option>$60,000+</option>
+            <option>Prefer not to say / TBD</option>
+          </select>
+        </div>
+        <div class="field span-2"><label>Budget Sensitivities or Cost Priorities</label>
+          <textarea rows="2" id="budget_sensitivities" placeholder="Are there areas where cost is especially critical? Any grant funding, investors, or financial constraints we should know about?"></textarea>
+        </div>
+        <div class="field span-2"><label>Longer-Term Vision for the Business / Range</label>
+          <textarea rows="2" id="longer_term_vision" placeholder="Where do you see this product or business in 2–3 years? This helps us plan for future Hub engagement and scale."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INDUSTRY PARTNERSHIP, COLLABORATION AND TRAINING -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">8</div><h2>Industry Partnership, Collaboration and Training</h2></div>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:18px;line-height:1.7;">Central Coast Industry Connect (CCIC) is the region's peak manufacturing network. As a <strong>CCIC Industry Partner</strong>, your business gains access to networking events, advisory support, and supplier connections — with <strong>SME members receiving a 10% discount on Food Manufacturing Innovation Hub facility use and training programs</strong>.</p>
+
+      <div class="sub-label">Program Questionnaire</div>
+
+      <div class="equip-grid">
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-riep" data-group="training_programs" value="School Immersion Days"><label for="tr-riep">School Immersion Days</label></div>
+          <div class="equip-desc">Connecting students with real manufacturing environments to build the region's talent pipeline.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-casual" data-group="training_programs" value="Casual Operator Induction"><label for="tr-casual">Casual Operator Induction</label></div>
+          <div class="equip-desc">Fast-track induction for casual and temporary staff covering safety, hygiene, and core operating procedures.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-familiarisation" data-group="training_programs" value="Operator Familiarisation Program"><label for="tr-familiarisation">Operator Familiarisation Program</label></div>
+          <div class="equip-desc">Structured on-floor familiarisation for new operators across core production tasks and equipment.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-machine" data-group="training_programs" value="Machine Operator Program"><label for="tr-machine">Machine Operator Program</label></div>
+          <div class="equip-desc">Practical training for machine operators in setup, operation, minor maintenance, and troubleshooting.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-innovating" data-group="training_programs" value="Innovating for Growth"><label for="tr-innovating">Innovating for Growth</label></div>
+          <div class="equip-desc">Helps businesses identify growth opportunities, test ideas, and build innovation capacity across product and process.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-leadership" data-group="training_programs" value="Leadership Essentials Program"><label for="tr-leadership">Leadership Essentials Program</label></div>
+          <div class="equip-desc">Core leadership skills for team leaders and supervisors — communication, people development, and leading on the floor.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-futureleaders" data-group="training_programs" value="Future Manufacturing Leaders Program"><label for="tr-futureleaders">Future Manufacturing Leaders Program</label></div>
+          <div class="equip-desc">A development pathway for emerging leaders preparing the next generation of manufacturing managers.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-foodprocessing" data-group="training_programs" value="Food Processing Operator Program"><label for="tr-foodprocessing">Food Processing Operator Program</label></div>
+          <div class="equip-desc">Covers GMP, food safety, hygiene, and hands-on operational skills for food and beverage production workers.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-advanced" data-group="training_programs" value="Advanced Operator Program"><label for="tr-advanced">Advanced Operator Program</label></div>
+          <div class="equip-desc">Micro-credentials for experienced operators to formalise expertise and move into more complex or specialist roles.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-bizfund" data-group="training_programs" value="Business Fundamentals"><label for="tr-bizfund">Business Fundamentals</label></div>
+          <div class="equip-desc">Practical business skills covering planning, finance basics, and pricing for food manufacturing founders and operators.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-quality" data-group="training_programs" value="Quality Fundamentals"><label for="tr-quality">Quality Fundamentals</label></div>
+          <div class="equip-desc">An accessible introduction to HACCP, QC documentation, non-conformances, and building a quality culture.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-collab" data-group="training_programs" value="Student & Industry Collaboration Programs"><label for="tr-collab">Student &amp; Industry Collaboration Programs</label></div>
+          <div class="equip-desc">Connect your business with University of Newcastle student projects, applied research, and industry-academic collaboration opportunities.</div>
+        </div>
+
+      </div>
+
+      <div class="sub-label" style="margin-top:18px;">Specialist Training Programs</div>
+
+      <div class="equip-grid">
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-brewing" data-group="training_programs" value="Brewing Fundamentals"><label for="tr-brewing">Brewing Fundamentals</label></div>
+          <div class="equip-desc">Practical introduction to brewing science, fermentation, process control, and quality for beer, cider, kombucha, and fermented beverage production.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-extrusion" data-group="training_programs" value="Introduction to Extrusion"><label for="tr-extrusion">Introduction to Extrusion</label></div>
+          <div class="equip-desc">Hands-on training covering extrusion principles, equipment operation, die selection, and troubleshooting for snacks, cereals, and plant-based proteins.</div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-card-header"><input type="checkbox" id="tr-baking" data-group="training_programs" value="Baking Fundamentals"><label for="tr-baking">Baking Fundamentals</label></div>
+          <div class="equip-desc">Core baking science and production skills for bread, pastry, and baked goods — ingredient function, process control, and scaling from bench to production.</div>
+        </div>
+
+      </div>
+
+      <div class="form-grid cols-2" style="margin-top:16px;">
+        <div class="field span-2">
+          <label>Any specific training needs or workforce development goals we should know about?</label>
+          <textarea rows="2" id="training_notes" placeholder="e.g. upskilling existing team, onboarding new staff, building a quality management system, student collaboration projects"></textarea>
+        </div>
+      </div>
+
+      <div class="sub-label" style="margin-top:24px;">Partnership &amp; Sponsorship Options</div>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:20px;line-height:1.7;">CCIC offers several ways to engage with the network — for manufacturers, suppliers and service providers, and organisations wanting to sponsor the sector. Tick any tiers you'd like to discuss. All prices include GST.</p>
+
+      <!-- INDUSTRY PARTNERSHIP -->
+      <div class="partner-pathway">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink);margin-bottom:4px;">Industry Partnership <span style="font-weight:400;font-size:11px;letter-spacing:0;text-transform:none;color:var(--muted);">— for manufacturers</span></div>
+        <p class="partner-pathway-intro">Practical support, connections, and a collective voice for manufacturers at every growth stage.</p>
+        <div class="tier-grid cols-3">
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="ip-startup" data-group="partnership_tiers" value="Startup / Sole Trader">
+              <label class="tier-card-title" for="ip-startup">Startup / Sole Trader<span class="tier-card-sub">0–5 employees</span></label>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="ip-sme" data-group="partnership_tiers" value="SME">
+              <label class="tier-card-title" for="ip-sme">SME<span class="tier-card-sub">5–15 employees</span></label>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="ip-large" data-group="partnership_tiers" value="Large Manufacturer">
+              <label class="tier-card-title" for="ip-large">Large Manufacturer<span class="tier-card-sub">15+ employees</span></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- INDUSTRY SUPPORT PARTNERSHIP -->
+      <div class="partner-pathway">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink);margin-bottom:4px;">Industry Support Partnership <span style="font-weight:400;font-size:11px;letter-spacing:0;text-transform:none;color:var(--muted);">— for suppliers &amp; service providers</span></div>
+        <p class="partner-pathway-intro">Direct, structured access to the manufacturers you want to reach — with the credibility, visibility, and relationships to turn that access into real business outcomes.</p>
+        <div class="tier-grid cols-1" style="max-width:280px;">
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="ip-support" data-group="partnership_tiers" value="Industry Support Partner">
+              <label class="tier-card-title" for="ip-support">Industry Support Partner<span class="tier-card-sub">Ingredients · Equipment · Packaging · Technology · Professional Services · Education</span></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SPONSORSHIP -->
+      <div class="partner-pathway">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink);margin-bottom:4px;">Sponsorship <span style="font-weight:400;font-size:11px;letter-spacing:0;text-transform:none;color:var(--muted);">— for organisations committed to growing manufacturing</span></div>
+        <p class="partner-pathway-intro">High-profile visibility, direct access to industry leaders, and a meaningful role in shaping the sector. Every tier includes Industry Partner status at no additional cost.</p>
+        <div class="tier-grid cols-4">
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="sp-silver" data-group="partnership_tiers" value="Silver">
+              <label class="tier-card-title" for="sp-silver">Silver<span class="tier-card-sub">Brand visibility</span></label>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="sp-gold" data-group="partnership_tiers" value="Gold">
+              <label class="tier-card-title" for="sp-gold">Gold<span class="tier-card-sub">Visibility + engagement</span></label>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="sp-platinum" data-group="partnership_tiers" value="Platinum">
+              <label class="tier-card-title" for="sp-platinum">Platinum<span class="tier-card-sub">Priority &amp; governance</span></label>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-card-header">
+              <input type="checkbox" id="sp-patron" data-group="partnership_tiers" value="Patron">
+              <label class="tier-card-title" for="sp-patron">Patron<span class="tier-card-sub">Highest recognition</span></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-grid" style="margin-top:4px;">
+        <div class="field">
+          <label>Any questions about membership or sponsorship?</label>
+          <textarea rows="2" id="partnership_questions" placeholder="Let us know and we'll follow up after the meeting. You can also email admin@centralcoastindustryconnect.com.au or visit centralcoastindustryconnect.com.au/industry-partnership"></textarea>
+        </div>
+      </div>
+
+      <div style="background:var(--field-bg);border:1.5px solid var(--border);border-radius:6px;padding:16px 18px;margin-top:14px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink);margin-bottom:6px;">Stay Connected — Join Our Mailing List</div>
+        <p style="font-size:12.5px;color:var(--mid);margin-bottom:12px;line-height:1.6;">Would you like to be kept informed about CCIC activities? Tick what you'd like to hear about.</p>
+        <div class="check-group">
+          <label class="check-item"><input type="checkbox" id="ml-0" data-group="mailing_list" value="Events & networking"> Events &amp; networking</label>
+          <label class="check-item"><input type="checkbox" id="ml-1" data-group="mailing_list" value="Workshops"> Workshops</label>
+          <label class="check-item"><input type="checkbox" id="ml-2" data-group="mailing_list" value="Roundtables"> Roundtables</label>
+          <label class="check-item"><input type="checkbox" id="ml-3" data-group="mailing_list" value="Site visits"> Site visits</label>
+          <label class="check-item"><input type="checkbox" id="ml-4" data-group="mailing_list" value="Programs"> Programs</label>
+          <label class="check-item"><input type="checkbox" id="ml-5" data-group="mailing_list" value="Training"> Training</label>
+          <label class="check-item"><input type="checkbox" id="ml-6" data-group="mailing_list" value="All of the above"> All of the above</label>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 9. INNOVATION & COLLABORATION ECOSYSTEM -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">9</div><h2>Innovation &amp; Collaboration Ecosystem</h2></div>
+      <p style="font-size:13px;color:var(--mid);margin-bottom:18px;line-height:1.7;">The Hub is a connected ecosystem of manufacturers, researchers, educators, suppliers, and service providers. The questions below help us understand how your business might benefit from and contribute to this network.</p>
+
+      <div class="sub-label">Collaboration Interests</div>
+      <div class="form-grid cols-2" style="margin-bottom:16px;">
+        <div class="field span-2">
+          <div class="check-group" style="margin-top:4px;">
+            <label class="check-item"><input type="checkbox" id="ci-0" data-group="collaboration_interests" value="Co-developing products or processes"> Co-developing products or processes with other Hub businesses</label>
+            <label class="check-item"><input type="checkbox" id="ci-1" data-group="collaboration_interests" value="Sharing production time or equipment"> Sharing production time or equipment with complementary businesses</label>
+            <label class="check-item"><input type="checkbox" id="ci-2" data-group="collaboration_interests" value="Participating in joint research or innovation projects"> Participating in joint research or innovation projects with universities</label>
+            <label class="check-item"><input type="checkbox" id="ci-3" data-group="collaboration_interests" value="Connecting with suppliers and ingredient companies"> Connecting with suppliers and ingredient companies through Hub introductions</label>
+            <label class="check-item"><input type="checkbox" id="ci-4" data-group="collaboration_interests" value="Joining working groups focused on industry challenges"> Joining working groups focused on industry challenges</label>
+            <label class="check-item"><input type="checkbox" id="ci-5" data-group="collaboration_interests" value="Participating in Hub showcases"> Participating in Hub showcases, demonstrations, or open days</label>
+            <label class="check-item"><input type="checkbox" id="ci-6" data-group="collaboration_interests" value="Mentoring or being mentored"> Mentoring or being mentored by other manufacturers in the network</label>
+            <label class="check-item"><input type="checkbox" id="ci-7" data-group="collaboration_interests" value="Contributing to food and beverage industry policy"> Contributing to food and beverage industry policy and advocacy</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-label">Research &amp; Development</div>
+      <div class="form-grid cols-2" style="margin-bottom:16px;">
+        <div class="field span-2">
+          <div class="check-group" style="margin-top:4px;">
+            <label class="check-item"><input type="checkbox" id="rd-0" data-group="rd_interests" value="Hosting University of Newcastle student projects"> Hosting University of Newcastle student projects or placements</label>
+            <label class="check-item"><input type="checkbox" id="rd-1" data-group="rd_interests" value="Contributing to food science research"> Contributing to food science research in partnership with the Hub</label>
+            <label class="check-item"><input type="checkbox" id="rd-2" data-group="rd_interests" value="Trialling new ingredients, packaging"> Trialling new ingredients, packaging, or processing technologies at the Hub</label>
+            <label class="check-item"><input type="checkbox" id="rd-3" data-group="rd_interests" value="Accessing government-funded innovation grants"> Accessing government-funded innovation grants or co-investment programs</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>What's the biggest challenge your business is facing right now?</label>
+          <textarea rows="3" id="biggest_challenge" placeholder="e.g. scaling production, finding skilled staff, accessing new markets, reducing costs, developing a new product range. The ecosystem is often the best place to start solving it."></textarea>
+        </div>
+        <div class="field">
+          <label>What do you have to offer other businesses in the network?</label>
+          <textarea rows="3" id="what_to_offer" placeholder="e.g. expertise in a particular ingredient or process, excess production capacity, established retail relationships, distribution network, technical knowledge."></textarea>
+        </div>
+        <div class="field span-2">
+          <label>Are there specific businesses, sectors, or types of collaborators you'd like to connect with?</label>
+          <input type="text" id="desired_collaborators" placeholder="e.g. organic ingredient suppliers, sustainable packaging companies, plant-based food producers, export distributors">
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. ANYTHING ELSE -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">10</div><h2>Anything Else?</h2></div>
+      <div class="question-list">
+        <div class="question-item">
+          <div class="q-num">A</div>
+          <div class="field" style="flex:1;"><label>How did you hear about the Hub?</label><input type="text" id="how_heard"></div>
+        </div>
+        <div class="question-item">
+          <div class="q-num">B</div>
+          <div class="field" style="flex:1;"><label>Have you worked with a contract manufacturer or food hub before?</label>
+            <select id="previous_manufacturer"><option value="">— Select —</option><option>Yes – positive experience</option><option>Yes – mixed experience</option><option>No – first time</option></select>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="q-num">C</div>
+          <div class="field" style="flex:1;"><label>Do you have existing IP, recipes, or process documentation to share ahead of the meeting?</label>
+            <select id="has_ip_docs"><option value="">— Select —</option><option>Yes – I'll send separately</option><option>Yes – I'll bring to the meeting</option><option>No</option></select>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="q-num">D</div>
+          <div class="field" style="flex:1;"><label>Do you have client-owned equipment or stock you'd like to store at the Food Manufacturing Innovation Hub?</label>
+            <select id="client_equipment"><option value="">— Select —</option><option>Yes – equipment</option><option>Yes – stock / raw materials</option><option>Yes – both equipment and stock</option><option>No</option><option>Possibly – to be discussed</option></select>
+            <input type="text" id="client_equipment_detail" style="margin-top:6px;" placeholder="If yes – describe equipment and/or stock, quantities, dimensions, storage or power requirements">
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="q-num">E</div>
+          <div class="field" style="flex:1;"><label>Any other information, questions, or context to share before the meeting?</label>
+            <textarea rows="3" id="other_info" placeholder="Anything at all — no question is too small."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURES -->
+    <div class="form-footer">
+      <div class="sig-block">
+        <label>Client Signature</label>
+        <div class="sig-line"></div>
+        <span style="font-size:11px;color:var(--muted);">Name &amp; Date</span>
+      </div>
+      <div class="sig-block">
+        <label>CCIC Hub Representative</label>
+        <div class="sig-line"></div>
+        <span style="font-size:11px;color:var(--muted);">Name &amp; Date</span>
+      </div>
+    </div>
+
+    <div class="submit-row">
+      <button class="btn btn-outline" onclick="window.print()">🖨 Print / Save as PDF</button>
+      <button class="btn btn-primary" onclick="submitToHub()">Submit to Hub →</button>
+    </div>
+
+  </div>
+
+  <div class="page-footer-bar">
+    <span>Central Coast Food Manufacturing Innovation Hub &nbsp;·&nbsp; Confidential Client Document</span>
+    <span><a href="mailto:admin@centralcoastindustryconnect.com.au">admin@centralcoastindustryconnect.com.au</a> &nbsp;·&nbsp; centralcoastindustryconnect.com.au</span>
+  </div>
+
+</div>
+<script>
+  const d = new Date();
+  document.getElementById('form-date').textContent = d.toLocaleDateString('en-AU', { day:'numeric', month:'long', year:'numeric' });
+
+  const PA_URL = 'https://default75c2ecb9c18f41d09a0e98aae3fe26.d8.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5ea5c6d48bd34ec4a19258876fea5b96/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lI4O8608g_QhP-ZMLwc7-W8CAv0_dye30VkTlSp1s8Q';
+
+  function getChecked(group) {
+    return Array.from(document.querySelectorAll(`[data-group="${group}"]:checked`)).map(el => el.value);
+  }
+
+  function val(id) {
+    const el = document.getElementById(id);
+    return el ? el.value.trim() : '';
+  }
+
+  function submitToHub() {
+    const required = ['business_name','contact_name','contact_email','product_name','product_category'];
+    const missing = required.filter(id => !val(id));
+    if (missing.length) {
+      alert('Please fill in the required fields before submitting.');
+      document.getElementById(missing[0]).focus();
+      return;
+    }
+
+    const preservativesRadio = document.querySelector('.preservatives-radio:checked');
+
+    const payload = {
+      submission_date: new Date().toLocaleDateString('en-AU', {day:'numeric', month:'long', year:'numeric'}),
+      // Section 1
+      business_name:        val('business_name'),
+      trading_name:         val('trading_name'),
+      contact_name:         val('contact_name'),
+      contact_role:         val('contact_role'),
+      contact_email:        val('contact_email'),
+      contact_phone:        val('contact_phone'),
+      business_location:    val('business_location'),
+      business_stage:       val('business_stage'),
+      business_description: val('business_description'),
+      // Section 2
+      product_name:         val('product_name'),
+      product_category:     val('product_category'),
+      product_category_other: val('product_category_other'),
+      sku_count:            val('sku_count'),
+      pack_format:          val('pack_format'),
+      product_description:  val('product_description'),
+      retail_price:         val('retail_price'),
+      sales_channel:        val('sales_channel'),
+      core_ingredients:     val('core_ingredients'),
+      product_state:        val('product_state'),
+      contains_alcohol:     val('contains_alcohol'),
+      requires_cooking:     val('requires_cooking'),
+      requires_extrusion:   val('requires_extrusion'),
+      requires_carbonation: val('requires_carbonation'),
+      contains_particulates: val('contains_particulates'),
+      particulate_detail:   val('particulate_detail'),
+      requires_xray:        val('requires_xray'),
+      preservatives:        preservativesRadio ? preservativesRadio.value : '',
+      preservatives_detail: val('preservatives_detail'),
+      // Section 3
+      equipment_selected:   getChecked('equipment_selected'),
+      equipment_other:      val('equipment_other'),
+      // Section 4
+      quality_considerations:  getChecked('quality_considerations'),
+      safety_considerations:   getChecked('safety_considerations'),
+      packaging_considerations: getChecked('packaging_considerations'),
+      product_concerns:     val('product_concerns'),
+      // Section 5
+      launch_date:          val('launch_date'),
+      pilot_batch_size:     val('pilot_batch_size'),
+      initial_run_size:     val('initial_run_size'),
+      production_frequency: val('production_frequency'),
+      annual_volume:        val('annual_volume'),
+      seasonal_peaks:       val('seasonal_peaks'),
+      target_shelf_life:    val('target_shelf_life'),
+      storage_requirements: val('storage_requirements'),
+      // Section 6
+      certifications:       getChecked('certifications'),
+      cert_other_detail:    val('cert_other_detail'),
+      regulatory_constraints: val('regulatory_constraints'),
+      allergens:            getChecked('allergens'),
+      nonnegotiables:       val('nonnegotiables'),
+      // Section 7
+      supply_inputs:        val('supply_inputs'),
+      budget_range:         val('budget_range'),
+      budget_sensitivities: val('budget_sensitivities'),
+      longer_term_vision:   val('longer_term_vision'),
+      // Section 8
+      training_programs:    getChecked('training_programs'),
+      training_notes:       val('training_notes'),
+      partnership_tiers:    getChecked('partnership_tiers'),
+      partnership_questions: val('partnership_questions'),
+      mailing_list:         getChecked('mailing_list'),
+      // Section 9
+      collaboration_interests: getChecked('collaboration_interests'),
+      rd_interests:         getChecked('rd_interests'),
+      biggest_challenge:    val('biggest_challenge'),
+      what_to_offer:        val('what_to_offer'),
+      desired_collaborators: val('desired_collaborators'),
+      // Section 10
+      how_heard:            val('how_heard'),
+      previous_manufacturer: val('previous_manufacturer'),
+      has_ip_docs:          val('has_ip_docs'),
+      client_equipment:     val('client_equipment'),
+      client_equipment_detail: val('client_equipment_detail'),
+      other_info:           val('other_info'),
+    };
+
+    // Section 3 equipment checkboxes use existing eq- ids; collect them as an array
+    const equipIds = ['eq-testkitchen','eq-bakery','eq-brewery','eq-extruder','eq-kettles',
+                      'eq-flowwrap','eq-filling','eq-xray','eq-labelling','eq-packing',
+                      'eq-testing','eq-supply','eq-storage','eq-advisory','eq-workspace'];
+    payload.equipment_selected = equipIds
+      .filter(id => document.getElementById(id)?.checked)
+      .map(id => document.getElementById(id).nextElementSibling?.textContent?.trim() || id);
+
+    const btn = document.querySelector('.btn-primary');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    fetch(PA_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(res => {
+      if (res.ok || res.status === 202) {
+        btn.textContent = '✓ Submitted';
+        btn.style.background = '#2a7a2a';
+        document.querySelector('.submit-row').insertAdjacentHTML('beforebegin',
+          '<p style="text-align:right;color:#2a7a2a;font-weight:600;margin-top:12px;">Thank you — your brief has been submitted. You will receive a confirmation email shortly.</p>');
+      } else {
+        throw new Error('Server responded with ' + res.status);
+      }
+    })
+    .catch(err => {
+      btn.disabled = false;
+      btn.textContent = 'Submit to Hub →';
+      alert('Submission failed. Please try again or email admin@centralcoastindustryconnect.com.au\n\nError: ' + err.message);
+    });
+  }
+</script>
+</body>
+</html>
