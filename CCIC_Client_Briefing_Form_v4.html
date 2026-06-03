@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCIC – New Client Opportunity Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:       #c0272d;
+    --red-dark:  #9b1e23;
+    --red-lt:    #f6e3e3;
+    --ink:       #1c1c1c;
+    --mid:       #4a4a4a;
+    --muted:     #888;
+    --border:    #ddd;
+    --bg:        #f7f7f7;
+    --surface:   #ffffff;
+    --field-bg:  #f2f2f2;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .page { max-width: 840px; margin: 0 auto; padding-bottom: 60px; }
+
+  /* HEADER */
+  .header-banner {
+    background: var(--red);
+    color: #fff;
+    padding: 32px 44px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-banner::after {
+    content: '';
+    position: absolute;
+    right: -40px; top: -40px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 40px solid rgba(255,255,255,0.07);
+    pointer-events: none;
+  }
+  .brand-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    opacity: 0.75; margin-bottom: 10px;
+  }
+  .header-banner h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px; font-weight: 700;
+    line-height: 1.05; text-transform: uppercase; letter-spacing: 0.02em;
+  }
+  .header-banner h1 span {
+    display: block; font-weight: 300;
+    font-size: 26px; letter-spacing: 0.04em; opacity: 0.88;
+  }
+  .header-meta {
+    position: absolute; right: 44px; top: 50%; transform: translateY(-50%);
+    text-align: right; font-size: 11px; opacity: 0.75; line-height: 1.9;
+  }
+  .header-meta strong { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .stripe { height: 5px; background: var(--red-dark); }
+
+  /* BODY */
+  .body-wrap { padding: 36px 44px; background: var(--surface); }
+
+  .intro-note {
+    background: var(--red-lt);
+    border-left: 4px solid var(--red);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 36px;
+    font-size: 13px; color: var(--mid); line-height: 1.7;
+  }
+  .intro-note strong { color: var(--red); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 40px; }
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--red);
+  }
+  .section-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--red); color: #fff;
+    font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink);
+  }
+
+  /* FORM GRID */
+  .form-grid { display: grid; gap: 14px; }
+  .form-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field.span-2 { grid-column: span 2; }
+
+  label {
+    font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted);
+  }
+  label .req { color: var(--red); margin-left: 2px; }
+
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="date"], input[type="number"], select, textarea {
+    width: 100%; background: var(--field-bg);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 9px 12px;
+    font-family: 'Barlow', sans-serif; font-size: 13.5px; color: var(--ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    -webkit-appearance: none; appearance: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none; border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(192,39,45,0.1); background: #fff;
+  }
+  textarea { resize: vertical; min-height: 76px; }
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
+  }
+
+  /* CHECKBOXES */
+  .check-group { display: flex; flex-wrap: wrap; gap: 8px 16px; padding-top: 3px; }
+  .check-item {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 13px; cursor: pointer; color: var(--ink);
+    font-weight: 400; letter-spacing: 0; text-transform: none;
+  }
+  .check-item input[type="checkbox"], .check-item input[type="radio"] {
+    width: 15px; height: 15px; accent-color: var(--red);
+    cursor: pointer; flex-shrink: 0;
+  }
+
+  /* SUB-LABEL */
+  .sub-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--red);
+    margin: 18px 0 10px; padding-bottom: 5px; border-bottom: 1px solid #e8e8e8;
+  }
+
+  /* QUESTION LIST (section 7) */
+  .question-list { display: grid; gap: 12px; }
+  .question-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+  .q-num {
+    width: 22px; height: 22px;
+    border: 1.5px solid var(--red); color: var(--red);
+    border-radius: 50%; font-size: 10px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 9px;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  /* FORM FOOTER */
+  .form-footer {
+    margin-top: 48px; padding-top: 24px;
+    border-top: 2px solid var(--border);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .sig-block label {
+    display: block; font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .sig-line { border-bottom: 1px solid var(--border); height: 36px; margin-bottom: 4px; }
+
+  /* PAGE FOOTER */
+  .page-footer-bar {
+    background: var(--ink); color: rgba(255,255,255,0.6);
+    font-size: 11px; padding: 14px 44px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .page-footer-bar a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+  .submit-row { display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px; }
+  .btn {
+    padding: 11px 26px; border-radius: 4px;
+    font-family: 'Barlow', sans-serif; font-size: 13px;
+    font-weight: 600; cursor: pointer; border: none;
+    letter-spacing: 0.04em; transition: all 0.15s;
+  }
+  .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--mid); }
+  .btn-outline:hover { border-color: var(--red); color: var(--red); }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { background: var(--red-dark); }
+  .hint { font-size: 11.5px; color: var(--muted); font-style: italic; }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .page { padding: 0; }
+    .body-wrap { padding: 24px 32px; }
+    .header-banner { padding: 20px 32px; }
+    .submit-row { display: none; }
+    input, select, textarea { border: 1px solid #ccc !important; background: #fff !important; box-shadow: none !important; }
+    .section { break-inside: avoid; }
+  }
+  @media (max-width: 620px) {
+    .body-wrap { padding: 28px 20px; }
+    .header-banner { padding: 24px 20px; }
+    .header-meta { display: none; }
+    .form-grid.cols-2 { grid-template-columns: 1fr; }
+    .field.span-2 { grid-column: span 1; }
+    .form-footer { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header-banner">
+    <div class="brand-label">Central Coast Industry Connect</div>
+    <h1>New Client Opportunity Brief<span>Food Manufacturing Innovation Hub</span></h1>
+    <div class="header-meta">
+      <strong>CCIC Client Form</strong>
+      Version 2.0 · Confidential<br>
+      <span id="form-date"></span>
+    </div>
+  </div>
+  <div class="stripe"></div>
+
+  <div class="body-wrap">
+
+    <div class="intro-note">
+      <strong>Welcome to the Hub.</strong> Please complete this form before your initial meeting with our team. Your answers help us match you with the right equipment and services, and make our time together as productive as possible. All information is treated as confidential.
+    </div>
+
+    <!-- 1. BUSINESS & CONTACT DETAILS -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">1</div><h2>Business &amp; Contact Details</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Business / Brand Name <span class="req">*</span></label><input type="text" id="business_name" placeholder="Legal or trading name"></div>
+        <div class="field"><label>Trading Name (if different)</label><input type="text" id="trading_name"></div>
+        <div class="field"><label>Primary Contact Name <span class="req">*</span></label><input type="text" id="contact_name" placeholder="Full name"></div>
+        <div class="field"><label>Role / Title</label><input type="text" id="contact_role" placeholder="e.g. Founder, Head of Production"></div>
+        <div class="field"><label>Email Address <span class="req">*</span></label><input type="email" id="contact_email" placeholder="name@example.com"></div>
+        <div class="field"><label>Phone Number</label><input type="tel" id="contact_phone" placeholder="+61 4xx xxx xxx"></div>
+        <div class="field"><label>Business Location / State</label><input type="text" id="business_location" placeholder="e.g. Gosford, NSW"></div>
+        <div class="field"><label>Business Stage</label>
+          <select id="business_stage">
+            <option value="">— Select —</option>
+            <option>Concept / Pre-revenue</option>
+            <option>Startup (trading &lt;2 years)</option>
+            <option>Established (trading 2–5 years)</option>
+            <option>Mature (trading 5+ years)</option>
+          </select>
+            <option>Concept / Pre-revenue</option>
+            <option>Startup (trading &lt;2 years)</option>
+            <option>Established (trading 2–5 years)</option>
+            <option>Mature (trading 5+ years)</option>
+          </select>
+        </div>
+        <div class="field span-2"><label>Brief Business Description</label>
+          <textarea rows="2" id="business_description" placeholder="What does your business make and who are your customers?"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PRODUCT OVERVIEW -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">2</div><h2>Product Overview</h2></div>
+
+      <div class="form-grid cols-2">
+        <div class="field"><label>Product / Range Name <span class="req">*</span></label><input type="text" id="product_name" placeholder="e.g. Artisan Grain Bars, Hop &amp; Brew Lager"></div>
+        <div class="field"><label>Product Category <span class="req">*</span></label>
+          <select>
+            <option value="">— Select —</option id="product_category">
+            <optgroup label="Beverages">
+              <option>Alcoholic Beverage (beer, wine, spirits, cider)</option>
+              <option>Low-Alcohol Beverage (&lt;0.5% ABV)</option>
+              <option>Non-Alcoholic / Soft Drink</option>
+              <option>Functional / Health Beverage</option>
+              <option>Juice / Cordial / Kombucha</option>
+            </optgroup>
+            <optgroup label="Baked &amp; Grain">
+              <option>Bread / Rolls / Loaf Products</option>
+              <option>Pastry / Pies / Savoury Baked Goods</option>
+              <option>Cakes / Sweet Baked Goods</option>
+              <option>Biscuits / Cookies / Crackers</option>
+              <option>Extruded Snacks &amp; Cereals</option>
+              <option>Pasta / Noodles</option>
+            </optgroup>
+            <optgroup label="Food Products">
+              <option>Confectionery / Chocolate</option>
+              <option>Sauces / Condiments / Dressings</option>
+              <option>Dips / Spreads / Nut Butters</option>
+              <option>Ready Meals / Meal Kits</option>
+              <option>Meat / Seafood / Poultry Products</option>
+              <option>Dairy / Plant-Based Dairy Alternatives</option>
+              <option>Fruit &amp; Vegetable Products</option>
+              <option>Snack Bars / Protein Bars / Trail Mix</option>
+              <option>Soups / Broths / Stocks</option>
+              <option>Spices / Seasonings / Blends</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option>Health Supplement / Nutraceutical</option>
+              <option>Pet Food</option>
+              <option>Other (please specify below)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field"><label>If "Other", please specify</label><input type="text" id="product_category_other"></div>
+        <div class="field"><label>Number of SKUs Planned</label><input type="number" min="1" id="sku_count" placeholder="e.g. 3"></div>
+        <div class="field span-2"><label>Pack Format &amp; Size(s)</label><input type="text" id="pack_format" placeholder="e.g. 330ml slim can, 500g flow-wrapped bar, 750g loaf"></div>
+        <div class="field span-2"><label>Product Description &amp; Positioning <span class="req">*</span></label>
+          <textarea rows="3" id="product_description" placeholder="Describe the product, its key ingredients, intended consumer, and what makes it distinctive. Include any functional or active ingredients and health claims if applicable."></textarea>
+        </div>
+        <div class="field"><label>Target Retail Price (per unit)</label><input type="text" id="retail_price" placeholder="e.g. $5–$8 RRP"></div>
+        <div class="field"><label>Primary Sales Channel</label>
+          <select>
+            <option value="">— Select —</option id="sales_channel">
+            <option>Direct-to-consumer (webshop)</option>
+            <option>Farmers markets / events</option>
+            <option>Independent retail / specialty stores</option>
+            <option>Supermarkets / major retail</option>
+            <option>Hospitality / food service / on-premise</option>
+            <option>Wholesale / distributor</option>
+            <option>Petrol station / convenience</option>
+            <option>Export</option>
+            <option>Multiple / unsure</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sub-label">Formulation &amp; Process Characteristics</div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Core / Key Ingredients</label><input type="text" id="core_ingredients" placeholder="e.g. wheat flour, malt barley, fruit pulp, oats, nuts"></div>
+        <div class="field"><label>Product State / Form</label>
+          <select>
+            <option value="">— Select —</option id="product_state">
+            <option>Liquid</option>
+            <option>Semi-liquid / paste / gel</option>
+            <option>Solid – baked</option>
+            <option>Solid – extruded</option>
+            <option>Solid – formed / moulded / pressed</option>
+            <option>Powder / dry blend</option>
+            <option>Mixed / layered / composite</option>
+          </select>
+        </div>
+        <div class="field"><label>Contains Alcohol?</label>
+          <select>
+            <option value="">— Select —</option id="contains_alcohol">
+            <option>No</option>
+            <option>Yes – low alcohol (&lt;0.5%)</option>
+            <option>Yes – standard (0.5%–10%)</option>
+            <option>Yes – high (10%+)</option>
+            <option>Not yet determined</option>
+          </select>
+        </div>
+        <div class="field"><label>Requires Cooking / Baking / Heating?</label>
+          <select>
+            <option value="">— Select —</option id="requires_cooking">
+            <option>Yes – full cook / bake</option>
+            <option>Yes – partial / blanch / temper</option>
+            <option>Yes – hot fill / pasteurisation</option>
+            <option>No – ambient / cold process</option>
+            <option>Not yet determined</option>
+          </select>
+        </div>
+        <div class="field"><label>Requires Extrusion?</label>
+          <select id="requires_extrusion"><option value="">— Select —</option><option>Yes</option><option>No</option><option>Unsure</option></select>
+        </div>
+        <div class="field"><label>Requires Carbonation?</label>
+          <select>
+            <option value="">— Select —</option id="requires_carbonation">
+            <option>Yes – forced carbonation</option>
+            <option>Yes – natural / refermentation</option>
+            <option>No</option><option>Not yet determined</option>
+          </select>
+        </div>
+        <div class="field"><label>Contains Particulates or Inclusions?</label>
+          <select id="contains_particulates"><option value="">— Select —</option><option>Yes</option><option>No</option><option>Unsure</option></select>
+        </div>
+        <div class="field"><label>If yes – particulate type &amp; approx. size</label>
+          <input type="text" id="particulate_detail" placeholder="e.g. fruit pieces ~5mm, nut chunks, spice flakes">
+        </div>
+        <div class="field"><label>Requires X-Ray / Foreign Body Inspection?</label>
+          <select>
+            <option value="">— Select —</option id="requires_xray">
+            <option>Yes – mandatory for retail / export</option>
+            <option>Yes – preferred</option>
+            <option>No</option><option>Unsure</option>
+          </select>
+        </div>
+        <div class="field span-2"><label>Preservatives / Additives</label>
+          <div class="check-group" style="margin-bottom:7px;">
+            <label class="check-item"><input type="radio" name="preservatives" class="preservatives-radio" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="preservatives" class="preservatives-radio" value="no"> No – clean label preferred</label>
+            <label class="check-item"><input type="radio" name="preservatives" class="preservatives-radio" value="open"> Open to recommendation</label>
+          </div>
+          <input type="text" id="preservatives_detail" placeholder="If yes, specify (e.g. citric acid, potassium sorbate)">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HUB EQUIPMENT & SERVICES (simplified) -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">3</div><h2>Hub Equipment &amp; Services Required</h2></div>
+      <p class="hint" style="margin-bottom:16px;">Tick all that apply. Don't worry if you're unsure — we'll work through this together at your meeting.</p>
+
+      <div class="sub-label">Development &amp; Processing</div>
+      <div class="check-group" style="margin-bottom: 16px;">
+        <label class="check-item"><input type="checkbox" id="eq-0" data-group="equipment_selected" value="Test Kitchen"> Test Kitchen</label>
+        <label class="check-item"><input type="checkbox" id="eq-1" data-group="equipment_selected" value="Bakery"> Bakery</label>
+        <label class="check-item"><input type="checkbox" id="eq-2" data-group="equipment_selected" value="Brewery"> Brewery</label>
+        <label class="check-item"><input type="checkbox" id="eq-3" data-group="equipment_selected" value="Extruder"> Extruder</label>
+        <label class="check-item"><input type="checkbox" id="eq-4" data-group="equipment_selected" value="Kettles / Cooking Vessels"> Kettles / Cooking Vessels</label>
+      </div>
+
+      <div class="sub-label">Packaging &amp; Inspection</div>
+      <div class="check-group" style="margin-bottom: 16px;">
+        <label class="check-item"><input type="checkbox" id="eq-5" data-group="equipment_selected" value="Flow Wrapper"> Flow Wrapper</label>
+        <label class="check-item"><input type="checkbox" id="eq-6" data-group="equipment_selected" value="Liquid Filling & Canning"> Liquid Filling &amp; Canning</label>
+        <label class="check-item"><input type="checkbox" id="eq-7" data-group="equipment_selected" value="X-Ray Inspection"> X-Ray Inspection</label>
+        <label class="check-item"><input type="checkbox" id="eq-8" data-group="equipment_selected" value="Labelling (Auto / Manual)"> Labelling (Auto / Manual)</label>
+        <label class="check-item"><input type="checkbox" id="eq-9" data-group="equipment_selected" value="Case Packing & Palletising"> Case Packing &amp; Palletising</label>
+      </div>
+
+      <div class="sub-label">Testing, Advisory &amp; Support</div>
+      <div class="check-group" style="margin-bottom: 16px;">
+        <label class="check-item"><input type="checkbox" id="eq-10" data-group="equipment_selected" value="Product Testing & Analysis"> Product Testing &amp; Analysis</label>
+        <label class="check-item"><input type="checkbox" id="eq-11" data-group="equipment_selected" value="Supply Chain & Procurement"> Supply Chain &amp; Procurement</label>
+        <label class="check-item"><input type="checkbox" id="eq-12" data-group="equipment_selected" value="Storage & Logistics"> Storage &amp; Logistics</label>
+        <label class="check-item"><input type="checkbox" id="eq-13" data-group="equipment_selected" value="Advisory & Commercialisation"> Advisory &amp; Commercialisation</label>
+        <label class="check-item"><input type="checkbox" id="eq-14" data-group="equipment_selected" value="Hot-Desk / Workspace"> Hot-Desk / Workspace</label>
+      </div>
+
+      <div class="field" style="margin-top:8px;"><label>Additional or specific requirements</label>
+        <input type="text" id="equipment_other" placeholder="Anything not listed above">
+      </div>
+    </section>
+
+    <!-- 4. PRODUCTION SCALE & TIMELINE -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">4</div><h2>Production Scale &amp; Timeline</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Target Launch / First Production Date</label><input type="date" id="launch_date"></div>
+        <div class="field"><label>Pilot / Development Batch Size</label><input type="text" id="pilot_batch_size" placeholder="e.g. 20 kg, 50 L, 200 units per SKU"></div>
+        <div class="field"><label>Initial Production Run Size</label><input type="text" id="initial_run_size" placeholder="e.g. 500 kg, 1,800 L, 2,000 bars per SKU"></div>
+        <div class="field"><label>Anticipated Production Frequency</label>
+          <select>
+            <option value="">— Select —</option id="production_frequency">
+            <option>One-off / seasonal</option>
+            <option>Weekly</option>
+            <option>Fortnightly</option>
+            <option>Monthly batches</option>
+            <option>Quarterly batches</option>
+            <option>Ad hoc / as needed</option>
+            <option>Unsure at this stage</option>
+          </select>
+        </div>
+        <div class="field"><label>Annual Volume Target (Year 1)</label><input type="text" id="annual_volume" placeholder="e.g. ~10,000 units, 3,000 L, 2 tonnes"></div>
+        <div class="field"><label>Known Seasonal Peaks</label><input type="text" id="seasonal_peaks" placeholder="e.g. Christmas, Easter, Summer"></div>
+        <div class="field"><label>Target Shelf Life</label><input type="text" id="target_shelf_life" placeholder="e.g. 6 months ambient, 12 months frozen, 3 weeks chilled"></div>
+        <div class="field"><label>Storage Requirements (Finished Goods)</label><input type="text" id="storage_requirements" placeholder="e.g. ambient 18–23°C, chilled &lt;5°C, ~3 pallets"></div>
+      </div>
+    </section>
+
+    <!-- 5. COMMERCIAL & BUDGET -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">5</div><h2>Commercial &amp; Budget Context</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>Will You Supply All Production Inputs?</label>
+          <select>
+            <option value="">— Select —</option id="supply_inputs">
+            <option>Yes – I will supply all ingredients &amp; packaging</option>
+            <option>Partially – I need sourcing support for some items</option>
+            <option>No – I need full sourcing assistance</option>
+            <option>Unsure</option>
+          </select>
+        </div>
+        <div class="field"><label>Overall Budget Range (Development + Pilot)</label>
+          <select>
+            <option value="">— Select —</option id="budget_range">
+            <option>Under $5,000</option>
+            <option>$5,000 – $15,000</option>
+            <option>$15,000 – $30,000</option>
+            <option>$30,000 – $60,000</option>
+            <option>$60,000+</option>
+            <option>Prefer not to say / TBD</option>
+          </select>
+        </div>
+        <div class="field span-2"><label>Budget Sensitivities or Cost Priorities</label>
+          <textarea rows="2" id="budget_sensitivities" placeholder="Are there areas where cost is especially critical? Any grant funding, investors, or financial constraints we should know about?"></textarea>
+        </div>
+        <div class="field span-2"><label>Longer-Term Vision for the Business / Range</label>
+          <textarea rows="2" id="longer_term_vision" placeholder="Where do you see this product or business in 2–3 years? This helps us plan for future Hub engagement and scale."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ANYTHING ELSE -->
+    <section class="section">
+      <div class="section-header"><div class="section-num">6</div><h2>Anything Else?</h2></div>
+      <div class="form-grid cols-2">
+        <div class="field"><label>How did you hear about the Hub?</label>
+          <input type="text" id="how_heard" placeholder="e.g. referral, LinkedIn, event, Google search">
+        </div>
+        <div class="field"><label>Worked with a contract manufacturer or food hub before?</label>
+          <select id="previous_manufacturer"><option value="">— Select —</option><option>Yes – positive experience</option><option>Yes – mixed experience</option><option>No – first time</option></select>
+        </div>
+        <div class="field span-2"><label>Anything else you'd like us to know before the meeting?</label>
+          <textarea rows="3" id="other_info" placeholder="Questions, context, constraints — anything at all."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <div class="submit-row">
+      <button class="btn btn-outline" onclick="window.print()">🖨 Print / Save as PDF</button>
+      <button class="btn btn-primary" onclick="submitToHub()">Submit to Hub →</button>
+    </div>
+
+  </div>
+
+  <div class="page-footer-bar">
+    <span>Central Coast Food Manufacturing Innovation Hub &nbsp;·&nbsp; Confidential Client Document</span>
+    <span><a href="mailto:admin@centralcoastindustryconnect.com.au">admin@centralcoastindustryconnect.com.au</a> &nbsp;·&nbsp; centralcoastindustryconnect.com.au</span>
+  </div>
+
+</div>
+<script>
+  const d = new Date();
+  document.getElementById('form-date').textContent = d.toLocaleDateString('en-AU', { day:'numeric', month:'long', year:'numeric' });
+
+  const PA_URL = 'https://default75c2ecb9c18f41d09a0e98aae3fe26.d8.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5ea5c6d48bd34ec4a19258876fea5b96/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lI4O8608g_QhP-ZMLwc7-W8CAv0_dye30VkTlSp1s8Q';
+
+  const val = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+  const checked = group => Array.from(document.querySelectorAll(`[data-group="${group}"]:checked`)).map(el => el.value);
+
+  function submitToHub() {
+    const required = ['business_name','contact_name','contact_email','product_name','product_category'];
+    const missing = required.filter(id => !val(id));
+    if (missing.length) {
+      alert('Please fill in all required fields (marked *) before submitting.');
+      document.getElementById(missing[0]).focus();
+      return;
+    }
+
+    const preservRadio = document.querySelector('.preservatives-radio:checked');
+
+    const payload = {
+      submission_date:      new Date().toLocaleDateString('en-AU', {day:'numeric', month:'long', year:'numeric'}),
+      business_name:        val('business_name'),
+      trading_name:         val('trading_name'),
+      contact_name:         val('contact_name'),
+      contact_role:         val('contact_role'),
+      contact_email:        val('contact_email'),
+      contact_phone:        val('contact_phone'),
+      business_location:    val('business_location'),
+      business_stage:       val('business_stage'),
+      business_description: val('business_description'),
+      product_name:         val('product_name'),
+      product_category:     val('product_category'),
+      product_category_other: val('product_category_other'),
+      sku_count:            val('sku_count'),
+      pack_format:          val('pack_format'),
+      product_description:  val('product_description'),
+      retail_price:         val('retail_price'),
+      sales_channel:        val('sales_channel'),
+      core_ingredients:     val('core_ingredients'),
+      product_state:        val('product_state'),
+      contains_alcohol:     val('contains_alcohol'),
+      requires_cooking:     val('requires_cooking'),
+      requires_extrusion:   val('requires_extrusion'),
+      requires_carbonation: val('requires_carbonation'),
+      contains_particulates: val('contains_particulates'),
+      particulate_detail:   val('particulate_detail'),
+      requires_xray:        val('requires_xray'),
+      preservatives:        preservRadio ? preservRadio.value : '',
+      preservatives_detail: val('preservatives_detail'),
+      equipment_selected:   checked('equipment_selected'),
+      equipment_other:      val('equipment_other'),
+      launch_date:          val('launch_date'),
+      pilot_batch_size:     val('pilot_batch_size'),
+      initial_run_size:     val('initial_run_size'),
+      production_frequency: val('production_frequency'),
+      annual_volume:        val('annual_volume'),
+      seasonal_peaks:       val('seasonal_peaks'),
+      target_shelf_life:    val('target_shelf_life'),
+      storage_requirements: val('storage_requirements'),
+      supply_inputs:        val('supply_inputs'),
+      budget_range:         val('budget_range'),
+      budget_sensitivities: val('budget_sensitivities'),
+      longer_term_vision:   val('longer_term_vision'),
+      how_heard:            val('how_heard'),
+      previous_manufacturer: val('previous_manufacturer'),
+      other_info:           val('other_info'),
+    };
+
+    const btn = document.querySelector('.btn-primary');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    fetch(PA_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(res => {
+      if (res.ok || res.status === 202) {
+        btn.textContent = '✓ Submitted';
+        btn.style.background = '#2a7a2a';
+        document.querySelector('.submit-row').insertAdjacentHTML('beforebegin',
+          '<p style="text-align:right;color:#2a7a2a;font-weight:600;margin-top:12px;">Thank you — your brief has been submitted. You will receive a confirmation email shortly.</p>');
+      } else {
+        throw new Error('Server responded with ' + res.status);
+      }
+    })
+    .catch(err => {
+      btn.disabled = false;
+      btn.textContent = 'Submit to Hub →';
+      alert('Submission failed. Please try again or email admin@centralcoastindustryconnect.com.au\n\nError: ' + err.message);
+    });
+  }
+</script>
+</body>
+</html>
