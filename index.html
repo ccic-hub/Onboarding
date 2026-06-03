@@ -529,7 +529,7 @@
   const d = new Date();
   document.getElementById('form-date').textContent = d.toLocaleDateString('en-AU', { day:'numeric', month:'long', year:'numeric' });
 
-  const PA_URL = 'YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URL';
+  const PA_URL = 'https://default75c2ecb9c18f41d09a0e98aae3fe26.d8.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5ea5c6d48bd34ec4a19258876fea5b96/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lI4O8608g_QhP-ZMLwc7-W8CAv0_dye30VkTlSp1s8Q';
 
   const val = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
   const checked = group => Array.from(document.querySelectorAll(`[data-group="${group}"]:checked`)).map(el => el.value);
